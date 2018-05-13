@@ -4,8 +4,8 @@ import express from 'express';
 import mongoose from 'mongoose';
 import logger from './logger';
 import authRoutes from '../route/auth-router';
-import profileRoutes from '../route/profile-router';
-import imageRoutes from '../route/image-router';
+import dogRoutes from '../route/dogs-route';
+// import imageRoutes from '../route/image-router';
 import errorMiddleWare from './error-middleware';
 
 const app = express();
@@ -13,8 +13,8 @@ let server = null;
 
 // #1 in chain
 app.use(authRoutes);
-app.use(profileRoutes);
-app.use(imageRoutes);
+app.use(dogRoutes);
+// app.use(imageRoutes);
 
 // chain 2
 app.all('*', (request, response) => {

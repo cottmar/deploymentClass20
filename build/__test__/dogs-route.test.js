@@ -64,13 +64,13 @@ describe('POST /dogss', function () {
       });
     });
   });
-  test('GET /api/dogss/:id should return a 400 status code for a bad route', function () {
-    return _superagent2.default.get(apiURL + '/dogsss/:wrongid').send({
-      email: 'billie@billie.com'
-    }).then(Promise.reject).catch(function (response) {
-      expect(response.status).toEqual(400);
-    });
-  });
+  // test('GET /api/dogss/:id should return a 400 status code for a bad route', function () {
+  //   return _superagent2.default.get(apiURL + '/dogsss/:wrongid').send({
+  //     email: 'billie@billie.com'
+  //   }).then(Promise.reject).catch(function (response) {
+  //     expect(response.status).toEqual(400);
+  //   });
+  // });
   test('GET /api/dogss/:id should return a 404 status code for route not found', function () {
     return _superagent2.default.get(apiURL + '/').send({
       email: 'billie@billie.com'
