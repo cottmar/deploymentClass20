@@ -12,8 +12,7 @@
     "dbon": "mkdir -p ./db && mongod --dbpath ./db",
     "dboff": "killall mongod",
     "build": "babel src -d build",
-    "start": "node index.js",
-    "heroku-postbuild": "npm run build"
+    "start": "babel src -d build && node index.js"
   },
   "jest": {
     "setupFiles": [
