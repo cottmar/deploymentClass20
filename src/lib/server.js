@@ -17,7 +17,7 @@ app.use(dogRoutes);
 // app.use(imageRoutes);
 
 // chain 2
-app.all('*', (request, response) => {
+app.all('/{0,}', (request, response) => {
   logger.log(logger.INFO, 'SERVER: Returning a 404 from the catch-all/default route');
   return response.sendStatus(404);
 });

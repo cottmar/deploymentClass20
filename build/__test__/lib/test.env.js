@@ -5,7 +5,7 @@ process.env.PORT = 7000;
 process.env.MONGODB_URI = 'mongodb://localhost/testing';
 process.env.FLICKR_SECRET = 'Wc75a4rlxCpLAREDMJLzLtktCXGUINfo1T2tc4f5k9MTtuCEZob7nMH08WboVxd';
 
-var isAwsMock = false; // turn back to true
+var isAwsMock = true; // turn back to true
 
 if (isAwsMock) {
   process.env.AWS_BUCKET = 'fake';
